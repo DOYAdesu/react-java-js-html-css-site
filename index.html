@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript practice</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <nav>
+        <div class="logo-area">
+          <h2>Tsuchiya Riku</h2>
+        </div>
+
+        <div class="nav-links">
+          <ul>
+            <li><a href="#about">Introduction</a></li>
+            <li><a href="#works">Photograph</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="infomation">
+        <div class="overlay"></div>
+        <img src="./images/pc.png" class="mobile" />
+        <div id="circle">
+          <div class="feature one">
+            <img src="./images/camera.png" alt="" />
+            <div>
+              <h1>Tsuchiya Riku</h1>
+              <p>name.</p>
+            </div>
+          </div>
+          <div class="feature two">
+            <img src="./images/processor.png" alt="" />
+            <div>
+              <h1>2002/05/10</h1>
+              <p>birthday.</p>
+            </div>
+          </div>
+          <div class="feature three">
+            <img src="./images/display.png" alt="" />
+            <div>
+              <h1>Student</h1>
+              <p>job.</p>
+            </div>
+          </div>
+          <div class="feature four">
+            <img src="./images/battery.png" alt="" />
+            <div>
+              <h1>Camp ＆ Game</h1>
+              <p>hobby.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="control">
+        <img src="./images/arrow.png" id="upBtn" />
+        <h3>Feature</h3>
+        <img src="./images/arrow.png" id="downBtn" />
+      </div>
+    </div>
+
+    <script>
+      var circle = document.getElementById("circle");
+      var upBtn = document.getElementById("upBtn");
+      var downBtn = document.getElementById("downBtn");
+
+      var rotateValue = circle.style.transform;
+      var rotateSum;
+
+      upBtn.onclick = function () {
+        /* 時計回りに90°回転させる */
+        rotateSum = rotateValue + "rotate(-90deg)";
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+      };
+      downBtn.onclick = function () {
+        /* 時計回りに90°回転させる */
+        rotateSum = rotateValue + "rotate(90deg)";
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+      };
+    </script>
+
+
+          <!-- Introduction -->
+          <section id="about" class="wrapper">
+            <h2 class="sec-title">Introduction</h2>
+            <ul>
+              <li>Tsuchiya Riku</li>
+              <li>2002/05/10</li>
+              <li>Student</li>
+              <li>Camp ＆ Game</li>
+            </ul>
+            <p>
+              "Let's all do our best together for future job hunting and other endeavors!"
+            </p>
+          </section>
+          <!-- Photograph -->
+          <section id="works" class="wrapper">
+            <h2 class="sec-title">Photograph</h2>
+            <ul>
+              <li><img src="images\works1.jpg" alt="work1"></li>
+              <li><img src="images\works2.jpg" alt="work2"></li>
+              <li><img src="images\works3.jpg" alt="work3"></li>
+              <li><img src="images\works4.jpg" alt="work4"></li>
+              <li><img src="images\works5.jpg" alt="work5"></li>
+              <li><img src="images\works6.jpg" alt="work6"></li>
+              <li><img src="images\works2.jpg" alt="work1"></li>
+              <li><img src="images\works4.jpg" alt="work2"></li>
+              <li><img src="images\works1.jpg" alt="work3"></li>
+            </ul>
+          </section>
+          <!-- News -->
+          <section id="news" class="wrapper">
+            <h2 class="sec-title">News</h2>
+            <dl>
+              <dt>2023/7/19</dt>
+              <dd>本サイトをリリースしました。</dd>
+              <dt>2023/7/19</dt>
+              <dd>Twitter開設しました</dd>
+              <dt>2023/7/19</dt>
+              <dd>フォローよろしくお願いいたします。</dd>
+              <dt>2023/7/19</dt>
+              <dd>ゲームしたい</dd>
+              <dt>2023/7/19</dt>
+              <dd>お腹すいた</dd>
+            </dl>
+          </section>
+          <!-- Contact -->
+          <section id="contact" class="wrapper">
+            <h2 class="sec-title">Contact</h2>
+            <p>お問い合わせは以下のフォームから
+            </p>
+            <form action="#" method="post">
+              <dl>
+                <dt><label for="name">お名前</label></dt>
+                <dd><input type="text" id="name"></dd>
+                <dt><label for="email">メールアドレス</label></dt>
+                <dd><input type="email" id="email"></dd>
+                <dt><label for="name">内容</label></dt>
+                <dd><textarea id="content" cols="30" rows="10"></textarea></dd>
+              </dl>
+              <div class="button"><input type="submit" value="送信"></div>
+            </form>
+          </section>
+    
+          <!-- Footer -->
+          <footer id="footer"></footer>
+        </picture>
+      </div>
+        </main>
+  </body>
+</html>
